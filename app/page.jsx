@@ -6,7 +6,7 @@ export default function Home() {
             <h1 className="text-4xl font-serif text-purple-700 mb-4">Wedding Venue Booking</h1>
             <p className="mb-6 text-purple-700">Check availability and request your date</p>
 
-            <Link className="bg-purple-600 text-white px-6 py-3 rounded-x1" href="/book"></Link>
+            <Link className="bg-purple-600 text-white px-6 py-3 rounded-x1" href="/book">Book Now</Link>
         </div>
     );
 }
