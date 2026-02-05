@@ -27,14 +27,14 @@ export default function BookingForm({date}){
 
         return(
             <form onSubmit={submit} className="space-y-3 mt-4">
-                <input className="border p-2 w-full" placeholder="Name" type="text" onChange={e => setForm({...form, name: e.target.value})}/>
-                <input className="border p-2 w-full" placeholder="Email" type="email" onChange={e => setForm({...form, email: e.target.value})}/>
-                <input className="border p-2 w-full" placeholder="Phone" type="tel" onChange={e => setForm({...form, phone: e.target.value})}/>
-                <input className="border p-2 w-full" placeholder="Number of Guests" type="number" onChange={e => setForm({...form, guests: e.target.value})}/>
-                <select className="border p-2 w-full" onChange={e => setForm({...form, package: e.target.value})}>
-                    <option value="Basic">Basic Package</option>
-                    <option value="Standard">Standard Package</option>
-                    <option value="Premium">Premium Package</option>
+                <input className="text-purple-700 border p-2 w-full" placeholder="Name" type="text" onChange={e => setForm({...form, name: e.target.value})}/>
+                <input className="text-purple-700 border p-2 w-full" placeholder="Email" type="email" onChange={e => setForm({...form, email: e.target.value})}/>
+                <input className="text-purple-700 border p-2 w-full" placeholder="Phone" type="tel" onChange={e => setForm({...form, phone: e.target.value})}/>
+                <input className="text-purple-700 border p-2 w-full" placeholder="Number of Guests" type="number" onChange={e => setForm({...form, guests: e.target.value})}/>
+                <select className="text-purple-700 border p-2 w-full" onChange={e => setForm({...form, package: e.target.value})}>
+                    <option className="text-gray-800" value="Basic">Basic Package</option>
+                    <option className="text-gray-800" value="Standard">Standard Package</option>
+                    <option className="text-gray-800" value="Premium">Premium Package</option>
                 </select>
                 <button type="submit" className="bg-blue-500 text-white p-2 rounded w-full">Request Booking</button>
             </form>

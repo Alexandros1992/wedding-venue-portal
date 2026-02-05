@@ -19,7 +19,7 @@ export default function Calendar({onSelect}) {
 
     return (
         <input
-            type="date" className="border p-3 rounded w-full"
+            type="date" className="text-purple-700 border p-3 rounded w-full"
             onChange = {(e) => {
                 if (unavailable.includes(e.target.value)) {
                     alert("This date is unavailable. Please select another date.");
