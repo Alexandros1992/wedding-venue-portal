@@ -26,12 +26,15 @@ const Dashboard = () => {
             <div className="p-10">
                 <h2 className="text-2x1 mb-4">Dashboard</h2>
                 <Logout />
+            </div>
+            <div className="mt-6 space-y-4">
                 {list.map(b => (
                     <div key={b.id} className="p-3 border mb-2 flex justify-between items-center">
                         <div>
                             <p><strong>Name:</strong> {b.name}</p>
                             <p><strong>Email:</strong> {b.email}</p>
                             <p><strong>Date:</strong> {b.date}</p>
+                            <p><strong>Guests:</strong>{b.guests}</p>
                             <p><strong>Status:</strong> {b.status}</p>    
                         </div>
                         <div>

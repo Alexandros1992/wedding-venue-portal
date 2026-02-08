@@ -4,7 +4,7 @@ import { useState } from "react";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { db } from "../lib/firebase";
 
-export default function BookingForm({date}){
+export default function BookingForm({date, onSuccess}){
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -21,8 +21,8 @@ export default function BookingForm({date}){
             status: "pending",
             createdAt: Timestamp.now()
         });
-
-        alert("Request sent! We will contact you soon.");
+        
+        onSuccess();
     };
 
         return(
@@ -36,7 +36,14 @@ export default function BookingForm({date}){
                     <option className="text-gray-800" value="Standard">Standard Package</option>
                     <option className="text-gray-800" value="Premium">Premium Package</option>
                 </select>
-                <button type="submit" className="bg-blue-500 text-white p-2 rounded w-full">Request Booking</button>
+                <button type="submit" className="bg-purple-700 text-white p-3 rounded w-full
+                    transition-all duration-200
+                    hover:bg-purple-800
+                    hover:scale-[1.02]
+                    hover:shadow-lg
+                    active:scale-95">
+                    Request Booking
+                </button>
             </form>
                 
         );
